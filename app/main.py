@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.routers import products, categories, orders
+from app.routers import products, categories, orders, analytics
 
 app = FastAPI(title="Shop Backend Pro")
 
@@ -7,6 +7,7 @@ app = FastAPI(title="Shop Backend Pro")
 app.include_router(products.router)
 app.include_router(categories.router)
 app.include_router(orders.router)
+app.include_router(analytics.router)
 
 
 @app.get("/")
